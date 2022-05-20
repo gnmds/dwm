@@ -15,9 +15,6 @@
 config.def.h
 
 # unignore relevant files
-!FAQ
-!LEGACY
 !LICENSE
 !Makefile
 !README
-!TODO
