@@ -8,15 +8,13 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10:antialias=true:autohint=true" };
 static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=10:antialias=true:autohint=true";
-static const char col_gray1[]       = "#16161d";
-static const char col_gray2[]       = "#2a2a37";
-static const char col_gray3[]       = "#c8c093";
-static const char col_gray4[]       = "#dcd7ba";
+static const char col_black[]       = "#1f1f28";
+static const char col_white[]       = "#c8c093";
 static const char col_blue[]        = "#7e9cd8";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray2, col_gray3 },
-	[SchemeSel]  = { col_blue,  col_gray2, col_blue  },
+	[SchemeNorm] = { col_white, col_black, col_white },
+	[SchemeSel]  = { col_blue,  col_black, col_blue  },
 };
 
 /* tagging */
@@ -58,7 +56,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-b", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray2, "-nf", col_gray3, "-sb", col_gray4, "-sf", col_gray1, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-b", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_white, "-sb", col_black, "-sf", col_blue, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
