@@ -30,7 +30,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-        { "trayer",   NULL,       NULL,       ~0,           True,        -1       }
+        { "Clearine", NULL,       NULL,       ~0,           True,        -1       }
 };
 
 /* layout(s) */
@@ -62,14 +62,14 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *bravecmd[] = { "brave", NULL };
-static const char *slockcmd[] = { "slock", NULL };
+static const char *clearinecmd[] = { "clearine", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      spawn,          {.v = bravecmd} },
-        { MODKEY,                       XK_space,  spawn,          {.v = slockcmd} },
+        { MODKEY,                       XK_space,  spawn,          {.v = clearinecmd} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
